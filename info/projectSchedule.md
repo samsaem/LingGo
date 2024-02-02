@@ -1,6 +1,7 @@
 # CS 35L Project Schedule
 
 ## Team Members
+<<<<<<< HEAD
 - Sam Pham, samhpham@ucla.edu, DIS 1E, Raghu
 - Ingrid Lopez, ingridklopez@g.ucla.edu, DIS 1C, Yu
 - Callum Lavezzo, callum507@g.ucla.edu , DIS 1B, Cui
@@ -54,3 +55,19 @@
 - Complete individual reports
 
 
+=======
+- Sam Pham, samhpham@ucla.edu
+- Ingrid Lopez, ingredklopez@g.ucla.edu
+- Shuk Yee Tsui, irist0419@g.ucla.edu
+
+## Initial Schedule and Milestone
+
+- Week 3:
+- Week 4:
+- Week 5:
+- Week 6:
+- Week 7:
+- Week 8:
+- Week 9:
+- Week 10:
+>>>>>>> 5fc29783b268b3e2f57571879821bdcd03d7f774
