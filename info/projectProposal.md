@@ -1,17 +1,11 @@
 # CS 35L Project Proposal
 
 ## Team Members
-<<<<<<< HEAD
 - Sam Pham, samhpham@ucla.edu, DIS 1E, Raghu
 - Ingrid Lopez, ingridklopez@g.ucla.edu, DIS 1C, Yu
 - Callum Lavezzo, callum507@g.ucla.edu , DIS 1B, Cui
 - Charles Castillo, charlescastillo@g.ucla.edu, DIS 1B, Cui
 - Shuk Yee Tsui, irist0419@g.ucla.edu, DIS ID, Kang
-=======
-- Sam Pham, samhpham@ucla.edu
-- Ingrid Lopez, ingredklopez@g.ucla.edu
-- Shuk Yee Tsui, irist0419@g.ucla.edu
->>>>>>> 5fc29783b268b3e2f57571879821bdcd03d7f774
 
 ## Web application: LingLogic
 
