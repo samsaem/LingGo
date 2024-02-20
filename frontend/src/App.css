@@ -1,4 +1,16 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(182, 231, 231);
 }
 
+.topnav a {
+  float: right;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(53, 166, 185);
+  color: black;
+}
