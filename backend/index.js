@@ -1,12 +1,20 @@
-// building nodejs and express server
+const express = require("express");
+const app = express();
+const cors = require("cors");
 
-const express = require('express')
-const app = express()
+// fixing POST request when trying to SEND through Insomnia
+app.use(express.json());
+app.use(cors());
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-  })
+// import models to mySQL workbench
+const db = require('./models');
 
-app.listen(3035, () => {
-    console.log("Server running on port 3035");
+// Routers
+const usersRouter = require('./routes/Users')
+app.use("/auth", usersRouter);
+
+db.sequelize.sync().then(() => {
+    app.listen(3035, () => {
+        console.log("Server running on port 3035");
+    });                                                    
 });
