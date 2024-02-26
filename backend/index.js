@@ -15,6 +15,6 @@ app.use("/auth", usersRouter);
 
 db.sequelize.sync().then(() => {
     app.listen(3035, () => {
-        console.log("Server running on port 3035");
+        console.log("Backend server running on port 3035");
     });                                                    
 });

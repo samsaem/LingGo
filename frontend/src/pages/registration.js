@@ -7,6 +7,7 @@ function Registration() {
     const initialValues = {
         username: "",
         password: "",
+        email: "",
     };
 
     const validationSchema = Yup.object().shape({
@@ -15,6 +16,7 @@ function Registration() {
 
     });
   
+    /* http://localhost:3035/auth = CREATE USER */
     const onSubmit = (data) => {
         axios.post("http://localhost:3035/auth", data).then(() => {
             console.log(data);
@@ -33,11 +35,15 @@ function Registration() {
             <ErrorMessage name="password" component="span" />
             <Field autocomplete="off" type="password" id="inputCreatePost" name="password" placeholder="(your password)" />
 
-            <button type="login">Login</button>
+            <label>Email: </label>
+            <ErrorMessage name="email" component="span" />
+            <Field autocomplete="off" id="inputCreatePost" name="email" placeholder="joebruin@ucla.edu" />
+
             <button type="registration">Register New Account</button>
 
         </Form>
     </Formik>
+
     </div>
   )
 }
