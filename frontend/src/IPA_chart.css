@@ -1,0 +1,43 @@
+/* App.css */
+
+table {
+  border-collapse: collapse;
+  width: 20%;
+  font-family: Arial, sans-serif;
+}
+
+caption {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+td:first-child {
+  font-weight:bold;
+  text-align: left;
+  background-color:#f2f2f2;
+}
+
+td:not(:first-child):empty {
+  background-color: #ffffff;
+}
+
+td:not(:empty, :first-child) {
+  background-color: #82b7d1;
+}
