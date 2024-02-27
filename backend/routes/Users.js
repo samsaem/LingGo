@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const { Users } = require("../models");
 const bcrypt = require("bcrypt");
-
+const {validateToken} = require("../middlewares/AuthMiddleware");
 // sign = generate token
-const {sign} = require('jsonwebtoken');
+const {sign} = require("jsonwebtoken");
 
 router.get("/", (req, res) => {
     res.send("testing GET backend/routes/Users.js")
@@ -38,7 +38,7 @@ router.post("/login", async (req,res) => {
             {username: user.username, id: user.id}, "importantsecret"
         );
 
-        res.json(accessToken);
+        res.json({token: accessToken, username: username, id: user.id});
     });
 });
 
