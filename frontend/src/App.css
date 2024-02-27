@@ -1,3 +1,33 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 body{
   background-color: rgb(182, 231, 231);
 }
@@ -12,5 +42,11 @@ body{
 
 .topnav a:hover {
   background-color: rgb(53, 166, 185);
-  color: black;
+  color: white;
+}
+
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
 }
