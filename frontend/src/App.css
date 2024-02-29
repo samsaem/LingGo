@@ -29,7 +29,7 @@
 
 
 body{
-  background-color: rgb(182, 231, 231);
+  background-color: rgb(217, 249, 249);
 }
 
 .topnav a {
@@ -46,7 +46,22 @@ body{
 }
 
 table, th, td{
-  border: 1px solid black;
+  border: 1px solid rgb(32, 124, 147);
   border-collapse: collapse;
   text-align: center;
+  padding: 15px;
+  box-shadow: 0px 0px 10px rgba(114, 114, 113, 0.5);
+}
+table{
+  border-radius: 15px;
+  overflow: hidden;
+} 
+
+th {
+  background-color: rgb(208, 207, 207);
+}
+
+.vowels:hover {
+  background-color: rgb(53, 166, 185);
+  color: white;
 }
