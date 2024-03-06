@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>IPA Chart</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="App.css">
+    </head>
+    <body>
+        <header>
+            <a href="IPA_chart.html">
+                <img src="wug.png" alt="wug logo" style="float:left;width:30px;height:30px;">
+            </a>
+            
+            <h2>&nbsp;LingGo</h2>
+        </header>
+
+        <div id="main">
+            <div class="topnav">
+                <a href="Quizzes.html" style="color: black;">quizzes</a>
+                <a href="" style="color: black;">contact</a>
+                <a href="" style="color:black">about</a>
+            </div>
+        </div>
+        
+        <div class="quiz">
+            <div>
+                <h1>Consonant Quiz</h1>
+                <p>Choose the symbol heard in the recording.</p>
+            </div>
+            <form>
+                <div class="question">
+                    <!-- Questions 1 -->
+                    <h3>Question 1</h3>
+
+                    <audio controls>
+                    <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/4/42/Voiced_labio-dental_fricative.ogg/Voiced_labio-dental_fricative.ogg.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <p>
+                        <input type="radio" name="q1" id="q1a">
+                        <label for="q1a">f</label>
+                        <input type="radio" name="q1" id="q1b">
+                        <label for="q1b">v</label>
+                    </p>
+
+                    <p class="answer" style="display:none;">q1b</p>
+                </div>
+
+                <div class="question">
+                    <!-- Questions 2 -->
+                    <h3>Question 2</h3>
+
+                    <audio controls>
+                    <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/8/80/Voiceless_dental_fricative.ogg/Voiceless_dental_fricative.ogg.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <p>
+                        <input type="radio" name="q2" id="q2a">
+                        <label for="q2a">θ</label>
+                        <input type="radio" name="q2" id="q2b">
+                        <label for="q2b">ð</label>
+                    </p>
+
+                    <p class="answer" style="display:none;">q2a</p>
+                </div>
+
+                <div class="question">
+                    <!-- Questions 3 -->
+                    <h3>Question 3</h3>
+
+                    <audio controls>
+                    <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/5/51/Voiceless_bilabial_plosive.ogg/Voiceless_bilabial_plosive.ogg.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <p>
+                        <input type="radio" name="q3" id="q3a">
+                        <label for="q3a">p</label>
+                        <input type="radio" name="q3" id="q3b">
+                        <label for="q3b">b</label>
+                    </p>
+
+                    <p class="answer" style="display:none;">q3a</p>
+                </div>
+
+                <div class="question">
+                    <!-- Questions 4 -->
+                    <h3>Question 4</h3>
+
+                    <audio controls>
+                    <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/0/02/Voiceless_alveolar_plosive.ogg/Voiceless_alveolar_plosive.ogg.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <p>
+                        <input type="radio" name="q4" id="q4a">
+                        <label for="q4a">t</label>
+                        <input type="radio" name="q4" id="q4b">
+                        <label for="q4b">d</label>
+                    </p>
+
+                    <p class="answer" style="display:none;">q4a</p>
+                </div>
+
+                <div class="question">
+                    <!-- Questions 5 -->
+                    <h3>Question 5</h3>
+
+                    <audio controls>
+                    <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Voiced_alveolar_sibilant.ogg/Voiced_alveolar_sibilant.ogg.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <p>
+                        <input type="radio" name="q5" id="q5a">
+                        <label for="q5a">s</label>
+                        <input type="radio" name="q5" id="q5b">
+                        <label for="q5b">z</label>
+                    </p>
+
+                    <p class="answer" style="display:none;">q5b</p>
+                </div>
+                <!-- Submit button -->
+                <p><input type="submit"></p>
+            </form>
+        </div>
+
+        <script>
+            // JavaScript to check answers
+            document.querySelector("form").addEventListener("submit", function(e){
+
+                e.preventDefault();
+
+                let score = 0;
+
+                if(document.querySelector("#q1b").checked){
+                score++;
+                }
+
+                if(document.querySelector("#q2a").checked){
+                score++;
+                }
+
+                if(document.querySelector("#q3a").checked){
+                score++;
+                }
+
+                if(document.querySelector("#q4a").checked){
+                score++;
+                }
+
+                if(document.querySelector("#q5b").checked){
+                score++;
+                }
+
+                alert("Number of correct answers: " + score);
+
+            })
+        </script>
+    </body>
+</html>
