@@ -176,7 +176,7 @@
 
         <script>
            
-         let sounds; // Declare the variable
+            let sounds; 
             var playing_sounds = [];
             function initializeSounds() {
                 sounds = {
@@ -213,10 +213,8 @@
             window.onload = initializeSounds;
 
             function play(character) {
-                console.log(character)
                 const sound = sounds[character];
         
-                console.log(sound);
                 if (sound) {
                     const audio = new Audio(sound);
                     playing_sounds.push(audio);
