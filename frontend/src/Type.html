@@ -173,52 +173,22 @@
               </tr>
             
         </table>
+
         
         <small>
             The symbols to the right are voiced, left are voiceless.
           </small>
+          <br></br>
+          <br></br>
+          <div class="container">
+            <div id="history" class="tools" id="toolbar">Select the desired symbol from above to insert it in the textbox below.</div>
+            <textarea id="keyboard" rows="10" cols="250"></textarea>
+              </div>
 
+              <script>
+                let soundMode = false
 
-        <script>
-            let soundMode = true;
-            let sounds; 
-            var playing_sounds = [];
-            function initializeSounds() {
-                sounds = {
-                    'p': './IPA_audio/Voiceless_bilabial_plosive.ogg',
-                    'b': './IPA_audio/Voiced_bilabial_plosive.ogg',
-                    't': './IPA_audio/Voiceless_alveolar_plosive.ogg',
-                    'd': './IPA_audio/Voiced_alveolar_plosive.ogg',
-                    'k': './IPA_audio/Voiceless_velar_plosive.ogg',
-                    'g': './IPA_audio/Voiced_velar_plosive_02.ogg',
-                    'ʔ': './IPA_audio/Glottal_stop.ogg',
-                    'm': './IPA_audio/Bilabial_nasal.ogg',
-                    'n': './IPA_audio/Alveolar_nasal.ogg',
-                    'ŋ': './IPA_audio/Velar_nasal.ogg',
-                    'ɾ': './IPA_audio/Alveolar_tap.ogg',
-                    'tʃ': './IPA_audio/Voiceless_palato-alveolar_affricate.ogg',
-                    'dʒ': './IPA_audio/Voiced_palato-alveolar_affricate.ogg',
-                    'f': './IPA_audio/Voiceless_labio-dental_fricative.ogg',
-                    'v': './IPA_audio/Voiced_labio-dental_fricative.ogg',
-                    'θ': './IPA_audio/Voiced_dental_fricative.ogg',
-                    'ð': './IPA_audio/Voiceless_dental_fricative.ogg',
-                    's': './IPA_audio/Voiceless_alveolar_sibilant.ogg',
-                    'z': './IPA_audio/Voiced_alveolar_sibilant.ogg',
-                    'ʃ': './IPA_audio/Voiceless_palato-alveolar_sibilant.ogg',
-                    'ʒ': './IPA_audio/Voiced_palato-alveolar_sibilant.ogg',
-                    'h': './IPA_audio/Voiceless_glottal_fricative.ogg',
-                    'w': './IPA_audio/Voiced_labio-velar_approximant.ogg',
-                    'ɹ': './IPA_audio/Alveolar_approximant.ogg',
-                    'j': './IPA_audio/Palatal_approximant.ogg',
-                    'l': './IPA_audio/Alveolar_lateral_approximant.ogg',
-                    
-                };
-
-            }
-            window.onload = initializeSounds;
-
-
-            function handleAction(character) {
+                function handleAction(character) {
               if(soundMode) {
                 play(character);
               } else {
@@ -227,36 +197,9 @@
               }
               
             }
-
-
-
-            function type(character) {
-
-              var textarea = document.getElementById("keyboard");
-              textarea.value = textarea.value + character;
-
-            }
-
-
-            function play(character) {
-                const sound = sounds[character];
-        
-                if (sound) {
-                    const audio = new Audio(sound);
-                    playing_sounds.push(audio);
-                    audio.addEventListener('ended', () => {
-                        playing_sounds.length = 0;
-                    });
-                    if (playing_sounds.length === 1) {
-                        audio.play();
-                    }
-                } else {
-                    console.error('Sound not found for character:', character);
+                function type(character) {
+                var textarea = document.getElementById("keyboard");
+                textarea.value = textarea.value + character;
                 }
-            }
 
-
-        
-        </script>
-        
-        
+              </script>
