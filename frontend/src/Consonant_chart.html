@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>IPA Chart</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="IPA_chart.css">
+    </head>
+    <body>
+        <header>
+            <img src="wug.png" alt="wug logo" style="float:left;width:30px;height:30px;">
+            <h2>&nbsp;LingGo</h2>
+        </header>
+        <div id="main">
+            <div class="topnav">
+              <a href="Quizzes.html" style="color: black;">quizzes</a>
+              <a href="" style="color: black;">contact</a>
+              <a href="" style="color:black">about</a>
+            </div>
+        </div>
+
+
+        <table>
+            <caption>
+                <h2>English Consonants</h2>
+            </caption>
+            <tr>
+                <th></th>
+                <th colspan="2">Bilabial</th>
+                <th colspan ="2">Labiodental</th>
+                <th colspan ="2">Dental</th>
+                <th colspan ="2">Alveolar</th>
+                <th colspan ="2">Postalveolar</th>
+                <th colspan ="2">Palatal</th>
+                <th colspan ="2">Velar</th>
+                <th colspan ="2">Glotal</th>
+              </tr>
+              <tr>
+                <td>Plosive</td>
+                <td onClick="play('p')">p</td>
+                <td onClick="play('b')">b</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="play('t')">t</td>
+                <td onClick="play('d')">d</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="play('k')">k</td>
+                <td onClick="play('g')">g</td>
+                <td onClick="play('ʔ')">ʔ</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Nasal</td>
+                <td></td>
+                <td onClick="play('m')">m</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="play('n')">n</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="play('ŋ')">ŋ</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Tap or Flap</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="play('ɾ')">ɾ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Affricative</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="play('tʃ')">tʃ</td>
+                <td onClick="play('dʒ')">dʒ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Fricative</td>
+                <td></td>
+                <td></td>
+                <td onClick="play('f')">f</td>
+                <td onClick="play('v')">v</td>
+                <td onClick="play('θ')">θ</td>
+                <td onClick="play('ð')">ð</td>
+                <td onClick="play('s')">s</td>
+                <td onClick="play('z')">z</td>
+                <td onClick="play('ʃ')">ʃ</td>
+                <td onClick="play('ʒ')">ʒ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="play('h')">h</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Approximant</td>
+                <td></td>
+                <td onClick="play('w')">w</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="play('ɹ')">ɹ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="play('j')">j</td>
+                <td></td>
+                <td onClick="play('w')">w</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Lateral Approximant</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="play('l')">l</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            
+        </table>
+        <small>
+            The symbols to the right are voiced, left are voiceless.
+          </small>
+
+
+        <script>
+           
+         let sounds; // Declare the variable
+            var playing_sounds = [];
+            function initializeSounds() {
+                sounds = {
+                    'p': './IPA_audio/Voiceless_bilabial_plosive.ogg',
+                    'b': './IPA_audio/Voiced_bilabial_plosive.ogg',
+                    't': './IPA_audio/Voiceless_alveolar_plosive.ogg',
+                    'd': './IPA_audio/Voiced_alveolar_plosive.ogg',
+                    'k': './IPA_audio/Voiceless_velar_plosive.ogg',
+                    'g': './IPA_audio/Voiced_velar_plosive_02.ogg',
+                    'ʔ': './IPA_audio/Glottal_stop.ogg',
+                    'm': './IPA_audio/Bilabial_nasal.ogg',
+                    'n': './IPA_audio/Alveolar_nasal.ogg',
+                    'ŋ': './IPA_audio/Velar_nasal.ogg',
+                    'ɾ': './IPA_audio/Alveolar_tap.ogg',
+                    'tʃ': './IPA_audio/Voiceless_palato-alveolar_affricate.ogg',
+                    'dʒ': './IPA_audio/Voiced_palato-alveolar_affricate.ogg',
+                    'f': './IPA_audio/Voiceless_labio-dental_fricative.ogg',
+                    'v': './IPA_audio/Voiced_labio-dental_fricative.ogg',
+                    'θ': './IPA_audio/Voiced_dental_fricative.ogg',
+                    'ð': './IPA_audio/Voiceless_dental_fricative.ogg',
+                    's': './IPA_audio/Voiceless_alveolar_sibilant.ogg',
+                    'z': './IPA_audio/Voiced_alveolar_sibilant.ogg',
+                    'ʃ': './IPA_audio/Voiceless_palato-alveolar_sibilant.ogg',
+                    'ʒ': './IPA_audio/Voiced_palato-alveolar_sibilant.ogg',
+                    'h': './IPA_audio/Voiceless_glottal_fricative.ogg',
+                    'w': './IPA_audio/Voiced_labio-velar_approximant.ogg',
+                    'ɹ': './IPA_audio/Alveolar_approximant.ogg',
+                    'j': './IPA_audio/Palatal_approximant.ogg',
+                    'l': './IPA_audio/Alveolar_lateral_approximant.ogg',
+                    
+                };
+
+            }
+            window.onload = initializeSounds;
+
+            function play(character) {
+                console.log(character)
+                const sound = sounds[character];
+        
+                console.log(sound);
+                if (sound) {
+                    const audio = new Audio(sound);
+                    playing_sounds.push(audio);
+                    audio.addEventListener('ended', () => {
+                        playing_sounds.length = 0;
+                    });
+                    if (playing_sounds.length === 1) {
+                        audio.play();
+                    }
+                } else {
+                    console.error('Sound not found for character:', character);
+                }
+            }
+
+
+        
+        </script>
+        
+        
