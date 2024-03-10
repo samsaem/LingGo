@@ -46,7 +46,7 @@ exports.dashboard = async (req, res) => {
 }
 
 
-}
+};
 
 
 
@@ -90,7 +90,7 @@ exports.dashboardUpdateNote = async (req, res) => {
   }catch(error){
     console.log(error);
   }
-}
+};
 
 /**
  * DELETE/
@@ -100,33 +100,33 @@ exports.dashboardUpdateNote = async (req, res) => {
 exports.dashboardDeleteNote = async (req, res) =>{
   try{
 
-    await Note.deleteOne({_id: rep.params.id })
-        .where({user: rep.user.id});
+    await Note.deleteOne({_id: req.params.id })
+        .where({user: req.user.id});
     res.redirect('/dashboard');
     }catch(error){
     console.log(error);
   }
-}
+};
 
 /**
  * GET/
  * Add Note
  */
-exports.dashboardAddNote = async(rep, res) =>{
+exports.dashboardAddNote = async(req, res) =>{
   res.render('dashboard/add',{
     layout: "../views/layouts/dashboard",
   });
-}
+};
 
-exports.dashboardAddNoteSubmit = async(rep, res) =>{
+exports.dashboardAddNoteSubmit = async(req, res) =>{
   try{
     req.body.user =req.user.id;
-    await Note.creat(req.body);
+    await Note.create(req.body);
     res.redirect('/dashboard');
   }catch(error){
     console.log(error);
   }
-}
+};
 
 /**
  * GET/
@@ -136,13 +136,12 @@ exports.dashboardSearch = async (req, res)=>{
   try{
     res.render('dashboard/search',{
       searchResults: '',
-      layout:'../vies/layouts/dashboard'
+      layout:'../views/layouts/dashboard'
 
     })
   }catch (error){
-    console.log(error);
   }
-}
+};
 /**
  * POST/
  * Search for Notes
@@ -161,9 +160,9 @@ exports.dashboardSearchSubmit = async(req, res) => {
 
 res.render('dashboard/search',{
   searchResults,
-  layout:'../vies/layouts/dashboard'
+  layout:'../views/layouts/dashboard'
 })
   }catch(error){
     console.log(error);
   }
-}
+};
