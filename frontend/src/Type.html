@@ -180,26 +180,50 @@
           </small>
           <br></br>
           <br></br>
+          <p>Select the desired symbol from above to insert it in the textbox below.</p>
           <div class="container">
-            <div id="history" class="tools" id="toolbar">Select the desired symbol from above to insert it in the textbox below.</div>
+            <div id="history" class="tools" id="toolbar"><h3>Select the desired symbol from above to insert it in the textbox below.</h3></div>
             <textarea id="keyboard" rows="10" cols="250"></textarea>
               </div>
 
               <script>
                 let soundMode = false
-
-                function handleAction(character) {
+                let history = new Set();
+                            function handleAction(character) {
               if(soundMode) {
                 play(character);
               } else {
                 type(character);
+                type_history(character);
                 keyboard.focus();
               }
-              
             }
+
                 function type(character) {
                 var textarea = document.getElementById("keyboard");
                 textarea.value = textarea.value + character;
                 }
 
-              </script>
+                function type_history(character) {
+                    var historyarea = document.getElementById("history");
+                    if(history.has(character)) {
+                        history.delete(character)  
+                        history = new Set([character, ...history]);
+                        historyarea.textContent = "History: " + new Array(...history).join(' ')
+                    } else {
+                        console.log(history)
+                        history = new Set([character, ...history])
+                        historyarea.textContent = "History: " + new Array(...history).join(' ')
+                    }
+                    for (var i = 0; i < history.length; i++) {
+                        history[i].addEventListener("onClick", type(history[i]))
+                    }
+                    historyarea.style.fontSize = "20px"; 
+                historyarea.innerHTML = "History: " + [...history].map(char => `<span class="clickable-char">${char}</span>`).join(' ');
+                document.querySelectorAll('.clickable-char').forEach(charElement => {
+                charElement.addEventListener('click', function () {
+                    type(charElement.textContent);
+                });
+            });
+        }
+        </script>
