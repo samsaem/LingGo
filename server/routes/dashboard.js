@@ -3,7 +3,9 @@ const router = express.Router();
 const { isLoggedIn } = require('../middleware/checkAuth');
 const dashboardController = require('../controllers/dashboardController');
 
-// *** DASHBOAD ROUTES ***
+/*  *** DASHBOAD ROUTES ***
+    ***    LOGGED IN    ***
+*/
 router.get('/dashboard', isLoggedIn, dashboardController.dashboard);
 router.get('/dashboard/item/:id', isLoggedIn, dashboardController.dashboardViewNote);
 router.put('/dashboard/item/:id', isLoggedIn, dashboardController.dashboardUpdateNote);
@@ -12,5 +14,12 @@ router.get('/dashboard/add', isLoggedIn, dashboardController.dashboardAddNote);
 router.post('/dashboard/add', isLoggedIn, dashboardController.dashboardAddNoteSubmit);
 router.get('/dashboard/search', isLoggedIn, dashboardController.dashboardSearch);
 router.post('/dashboard/search', isLoggedIn, dashboardController.dashboardSearchSubmit);
+
+router.get('/dashboard/quiz', isLoggedIn, dashboardController.dashboardQuiz);
+router.get('/dashboard/ipachart', isLoggedIn, dashboardController.dashboardIPAChart);
+
+
+
+
 module.exports = router;
 

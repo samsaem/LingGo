@@ -1,4 +1,8 @@
-// Homepage
+/*  *** MAIN PAGE CONTROLLERS ***
+    ***  NOT LOGGED IN  ***
+*/
+
+// Homepage -- insert IPA chart here
 exports.homepage = async (req, res) => {
     const locals = {
         title: "LingGo",
@@ -11,7 +15,7 @@ exports.homepage = async (req, res) => {
     });
 }
 
-// About page
+// About page 
 exports.about = async (req, res) => {
     const locals = {
       title: "About - LingGo",

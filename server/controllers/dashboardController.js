@@ -1,6 +1,9 @@
 const Note = require('../models/Notes');
 const mongoose = require('mongoose');
 
+/*  *** DASHBOAD CONTROLLERS ***
+    ***    LOGGED IN    ***
+*/
 
 // Dashboard
 exports.dashboard = async (req, res) => {
@@ -9,7 +12,7 @@ exports.dashboard = async (req, res) => {
       title: "Dashboard",
       description: "Interactive IPA web app!",
   }
-
+  
   let perPage = 12;
   let page = req.query.page || 1;
 
@@ -166,3 +169,30 @@ exports.dashboardSearchSubmit = async (req, res) => {
     console.log(error);
   }
 };
+
+
+// AFTER logged in: Quiz
+exports.dashboardQuiz = async (req, res) => {
+  const locals = {
+      title: "Quiz",
+      description: "Let's test your knowledge!",
+  }
+
+  res.render('dashboard/quiz', {
+    locals, 
+    layout: '../views/layouts/dashboard'
+  });
+}
+
+// AFTER logged in: IPA chart
+exports.dashboardIPAChart = async (req, res) => {
+  const locals = {
+      title: "IPA",
+      description: "IPA chart",
+  }
+
+  res.render('dashboard/ipachart', {
+    locals, 
+    layout: '../views/layouts/dashboard'
+  });
+}
