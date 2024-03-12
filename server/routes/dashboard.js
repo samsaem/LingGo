@@ -16,6 +16,11 @@ router.get('/dashboard/search', isLoggedIn, dashboardController.dashboardSearch)
 router.post('/dashboard/search', isLoggedIn, dashboardController.dashboardSearchSubmit);
 
 router.get('/dashboard/quiz', isLoggedIn, dashboardController.dashboardQuiz);
+router.get('/dashboard/quizvowels', isLoggedIn, dashboardController.dashboardQuizVowels);
+router.get('/dashboard/quizconsonants', isLoggedIn, dashboardController.dashboardQuizConsonants);
+
+
+
 router.get('/dashboard/ipachart', isLoggedIn, dashboardController.dashboardIPAChart);
 router.get('/dashboard/ipakeyboard', isLoggedIn, dashboardController.dashboardIPAkeyboard);
 

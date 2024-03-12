@@ -1,0 +1,59 @@
+AFTER logged in: VOWELS QUIZ
+
+<!-- IMPLEMENTED CHATGPT TO ASSIST WITH QUIZ PAGE
+    Prompt: Create a one page multiple choice with that displays result at the end with javascript
+-->
+
+<body>
+
+    <div id="quiz">
+      <div class="question">
+        <p>1. What is the capital of France?</p>
+        <input type="radio" name="q1" value="a"> a) Paris<br>
+        <input type="radio" name="q1" value="b"> b) London<br>
+        <input type="radio" name="q1" value="c"> c) Rome<br>
+      </div>
+      <div class="question">
+        <p>2. Which planet is known as the Red Planet?</p>
+        <input type="radio" name="q2" value="a"> a) Mars<br>
+        <input type="radio" name="q2" value="b"> b) Venus<br>
+        <input type="radio" name="q2" value="c"> c) Jupiter<br>
+      </div>
+      <button onclick="showResult()">Submit</button>
+    </div>
+    
+    <div id="result" style="display: none;">
+      <h2>Result</h2>
+      <p id="score"></p>
+    </div>
+    
+    <script>
+    function showResult() {
+      var score = 0;
+      var totalQuestions = 2;
+    
+      var answers = {
+        q1: "a",
+        q2: "a"
+      };
+    
+      for (var i = 1; i <= totalQuestions; i++) {
+        var radios = document.getElementsByName('q' + i);
+        for (var j = 0; j < radios.length; j++) {
+          if (radios[j].checked) {
+            if (radios[j].value === answers['q' + i]) {
+              score++;
+            }
+            break;
+          }
+        }
+      }
+    
+      var resultContainer = document.getElementById('result');
+      resultContainer.style.display = 'block';
+      var scoreContainer = document.getElementById('score');
+      scoreContainer.innerHTML = 'You scored ' + score + ' out of ' + totalQuestions + '.';
+    }
+    </script>
+    
+    </body>
