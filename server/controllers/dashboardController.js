@@ -196,3 +196,16 @@ exports.dashboardIPAChart = async (req, res) => {
     layout: '../views/layouts/dashboard'
   });
 }
+
+// AFTER logged in: IPA chart
+exports.dashboardIPAkeyboard = async (req, res) => {
+  const locals = {
+      title: "IPA keyboard",
+      description: "IPA keyboard",
+  }
+
+  res.render('dashboard/ipakeyboard', {
+    locals, 
+    layout: '../views/layouts/dashboard'
+  });
+}

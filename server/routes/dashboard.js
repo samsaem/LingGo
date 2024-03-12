@@ -17,6 +17,8 @@ router.post('/dashboard/search', isLoggedIn, dashboardController.dashboardSearch
 
 router.get('/dashboard/quiz', isLoggedIn, dashboardController.dashboardQuiz);
 router.get('/dashboard/ipachart', isLoggedIn, dashboardController.dashboardIPAChart);
+router.get('/dashboard/ipakeyboard', isLoggedIn, dashboardController.dashboardIPAkeyboard);
+
 
 
 
