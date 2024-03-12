@@ -37,20 +37,18 @@ Users can create an account with LingGo through their gmail account to access ad
 **IPA Chart:**
 The interactive IPA chart includes two tables (consonants and vowels). Both tables are interactive. Users may hover and click on a symbol. Once a symbol is clicked, a corresponding sound will automatically play.
 
-**Features:**
+**Features when Users create an account with LingGo:**
 1. _Audio:_ User is able to hear audio sample of the IPA symbol
 
 2. _Navigation Bar:_ At the bottom right of the page there is a navigation bar that can take users to other features including note, quiz, IPA chart, IPA keyboard.
 
-**Additional features when Users create an account with LingGo:**
+3. _Notes:_ Users are able to write, edit, save, and delete notes from their account
 
-4. _Notes:_ Users are able to write, edit, save, and delete notes from their account
+4. _Search:_ Users can use the `search` feature at top of the web page to look for previous notes they have saved
 
-5. _Search:_ Users can use the `search` feature at top of the web page to look for previous notes they have saved
+5. _IPA Keyboard:_ Since IPA symbols are special characters that aren't easily accessible through computer's keyboard, users can use this feature to get the `symbol` by click on the symbol and paste it.
 
-6. _IPA Keyboard:_ Since IPA symbols are special characters that aren't easily accessible through computer's keyboard, users can use this feature to get the `symbol` by click on the symbol and paste it.
-
-7. _Quiz:_ LingGo is launching a quiz feature that is currently in a beta phase and users can test their knowledge with our multiple choice quiz features on a certain topics of the IPA chart.
+6. _Quiz:_ LingGo is launching a quiz feature that is currently in a beta phase and users can test their knowledge with our multiple choice quiz features on a certain topics of the IPA chart.
 
 ## BackEnd Endpoints
 
