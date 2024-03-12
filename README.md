@@ -1,11 +1,12 @@
-# CS 35L Web App: LingLogic
+# CS 35L Web App: LingGo
 
-an interactive web application for International Phonetic Alphabet (IPA) chart specifically about General American English
+an interactive study tool to learn the International Phonetic Alphabet (IPA) chart specifically about General American English
 
 Tech Stack:
-* Frontend: ReactJS
-* Server Tier: Express.js and Node.js
-* Database Tier: Mongo DB
+* HTML/CSS
+* Express.js
+* Node.js
+* Mongo DB
 
 ## Environment Set Up:
 **For Frontend:**
@@ -23,32 +24,33 @@ GOOGLE_CLIENT_SECRET=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
 GOOGLE_CALLBACK_URL=http://localhost:3035/google/callback
 ```
 
+## Running
+
+    npm start
+
+The backend will be available on http://localhost:3035 and terminal will returns a "App running on port 3035" message.
+
 ## LingGo App:
-**Sign-In Page:**
-This is the first page users will see. Users have the option to sign-in to an existing account or create a new account. 
-
-Alternatively, users may choose to not create account and utilized the app without saving any data for their current session.
-
-**Bio Page:**
-Once users create an account they will be asked to complete their profile on the Bio Page.
-
-**Authentication Page:**
-If users are logging into an existing account this page will sent an authentication code to verify their email.
+**Log-in Page:**
+Users can create an account with LingGo through their gmail account to access additional features including adding, searching, editing, deleting notes and taking IPA quiz.
 
 **IPA Chart:**
-The interactive IPA chart includes two tables. Both tables are interactive. Users may hover and click on a symbol. Once a symbol is clicked, a corresponding sound will automatically play.
+The interactive IPA chart includes two tables (consonants and vowels). Both tables are interactive. Users may hover and click on a symbol. Once a symbol is clicked, a corresponding sound will automatically play.
 
 **Features:**
 1. _Audio:_ User is able to hear audio sample of the IPA symbol
 
-2. _Notes:_ Users are able to write and save notes to their account
+2. _Navigation Bar:_ At the bottom right of the page there is a navigation bar that can take users to other features including note, quiz, IPA chart, IPA keyboard.
 
-3. _Search:_ Users can use the search feature to look for text in the notes they have saved
+**Additional features when Users create an account with LingGo:**
 
-4. 
+4. _Notes:_ Users are able to write, edit, save, and delete notes from their account
 
-5. _Navigation Bar:_ At the top of the page there is a navigation bar that can take you back to the sign up, login, about us, or contact page.
+5. _Search:_ Users can use the `search` feature at top of the web page to look for previous notes they have saved
 
+6. _IPA Keyboard:_ Since IPA symbols are special characters that aren't easily accessible through computer's keyboard, users can use this feature to get the `symbol` by click on the symbol and paste it.
+
+7. _Quiz:_ LingGo is launching a quiz feature that is currently in a beta phase and users can test their knowledge with our multiple choice quiz features on a certain topics of the IPA chart.
 
 ## BackEnd Endpoints
 
