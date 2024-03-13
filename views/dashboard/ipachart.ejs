@@ -1,2 +1,110 @@
 AFTER logged in: IPA CHART
 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>IPA Chart</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="/css/main.css">
+    </head>
+    <body>
+        <!-- Consonant Table -->
+
+        
+        <!-- Vowel Table -->
+        <div class="quiz">
+          <div>
+            <h1>Vowels</h1>
+            <p>Where symbols appear in pairs, the one to the right represents a rounded vowel.</p>            
+          </div>
+
+          <table style="width: 100%; background-color: aliceblue;">
+            <tr>
+              <th>&nbsp</th>
+              <th colspan="2">Front</th>
+              <th colspan="2">Near-Front</th>
+              <th colspan="2">Central</th>
+              <th colspan="2">Near-Back</th>
+              <th colspan="2">Back</th>
+            </tr>
+            <tr>
+              <th>Close</th>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/9/91/Close_front_unrounded_vowel.ogg/Close_front_unrounded_vowel.ogg.mp3')">i</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/e/ea/Close_front_rounded_vowel.ogg/Close_front_rounded_vowel.ogg.mp3')">y</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/5/53/Close_central_unrounded_vowel.ogg/Close_central_unrounded_vowel.ogg.mp3')">ɨ</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/6/66/Close_central_rounded_vowel.ogg/Close_central_rounded_vowel.ogg.mp3')">ʉ</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Close_back_unrounded_vowel.ogg/Close_back_unrounded_vowel.ogg.mp3')">ɯ</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/5/5d/Close_back_rounded_vowel.ogg/Close_back_rounded_vowel.ogg.mp3')">u</td>
+            </tr>
+            <tr>
+              <th>Near-Close</th>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/4/4c/Near-close_near-front_unrounded_vowel.ogg/Near-close_near-front_unrounded_vowel.ogg.mp3')">ɪ</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/e/e3/Near-close_near-front_rounded_vowel.ogg/Near-close_near-front_rounded_vowel.ogg.mp3')">ʏ</td>
+              <td colspan="2">&nbsp</td>
+              <td>&nbsp</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/d/d5/Near-close_near-back_rounded_vowel.ogg/Near-close_near-back_rounded_vowel.ogg.mp3')">ʊ</td>
+              <td colspan="2">&nbsp</td>
+            </tr>
+            <tr>
+              <th>Close-Mid</th>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/6/6c/Close-mid_front_unrounded_vowel.ogg/Close-mid_front_unrounded_vowel.ogg.mp3')">e</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/5/53/Close-mid_front_rounded_vowel.ogg/Close-mid_front_rounded_vowel.ogg.mp3')">ø</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/6/60/Close-mid_central_unrounded_vowel.ogg/Close-mid_central_unrounded_vowel.ogg.mp3')">ɘ</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/b/b5/Close-mid_central_rounded_vowel.ogg/Close-mid_central_rounded_vowel.ogg.mp3')">ɵ</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/2/26/Close-mid_back_unrounded_vowel.ogg/Close-mid_back_unrounded_vowel.ogg.mp3')">ɤ</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/8/84/Close-mid_back_rounded_vowel.ogg/Close-mid_back_rounded_vowel.ogg.mp3')">o</td>
+            </tr>
+            <tr>
+              <th>Mid</th>
+              <td colspan="2">&nbsp</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" colspan="2" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/d/d9/Mid-central_vowel.ogg/Mid-central_vowel.ogg.mp3')">ə</td>
+              <td colspan="2">&nbsp</td>
+              <td colspan="2">&nbsp</td>
+            </tr>
+            <tr>
+              <th>Open-Mid</th>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/7/71/Open-mid_front_unrounded_vowel.ogg/Open-mid_front_unrounded_vowel.ogg.mp3')">ɛ</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/0/00/Open-mid_front_rounded_vowel.ogg/Open-mid_front_rounded_vowel.ogg.mp3')">œ</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/0/01/Open-mid_central_unrounded_vowel.ogg/Open-mid_central_unrounded_vowel.ogg.mp3')">ɜ</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/d/d9/Open-mid_central_rounded_vowel.ogg/Open-mid_central_rounded_vowel.ogg.mp3')">ɞ</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/8/80/PR-open-mid_back_unrounded_vowel2.ogg/PR-open-mid_back_unrounded_vowel2.ogg.mp3')">ʌ</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/d/d0/PR-open-mid_back_rounded_vowel.ogg/PR-open-mid_back_rounded_vowel.ogg.mp3')">ɔ</td>
+            </tr>
+            <tr>
+              <th>Near-Open</th>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/c/c9/Near-open_front_unrounded_vowel.ogg/Near-open_front_unrounded_vowel.ogg.mp3')">æ</td>
+              <td>&nbsp</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/2/22/Near-open_central_unrounded_vowel.ogg/Near-open_central_unrounded_vowel.ogg.mp3')">ɐ</td>
+              <td>&nbsp</td>
+              <td colspan="2">&nbsp</td>
+              <td colspan="2">&nbsp</td>
+            </tr>
+            <tr>
+              <th>Open</th>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/0/0e/PR-open_front_unrounded_vowel.ogg/PR-open_front_unrounded_vowel.ogg.mp3')">a</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/c/c1/Open_front_rounded_vowel.ogg/Open_front_rounded_vowel.ogg.mp3')">ɶ</td>
+              <td colspan="2">&nbsp</td>
+              <td colspan="2">&nbsp</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/e/e5/Open_back_unrounded_vowel.ogg/Open_back_unrounded_vowel.ogg.mp3')">ɑ</td>
+              <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/3/31/PR-open_back_rounded_vowel.ogg/PR-open_back_rounded_vowel.ogg.mp3')">ɒ</td>
+            </tr>
+          </table>
+        </div>
+        <script>
+          function playAudio(url){
+            new Audio(url).play();
+          }
+        </script>
+      </body>
+</html>
+
