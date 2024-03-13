@@ -192,4 +192,10 @@ Note App Tutorial: https://www.youtube.com/watch?v=BDo1lgaZuII&t=9167s
 
 Account authentication via PassportJS: https://www.passportjs.org/packages/passport-google-oauth20/
 
+Headers: https://getbootstrap.com/docs/5.0/examples/headers/
+
+Footers: https://getbootstrap.com/docs/5.2/examples/footers/
+
+Buttons: https://getbootstrap.com/docs/4.0/components/buttons/
+
 ChatGPT prompt: "Create a one page multiple choice quiz that displays result at the end with javascript"
