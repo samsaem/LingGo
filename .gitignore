@@ -1,0 +1,5 @@
+# gitignore file is used in a git repository to ignore the files and directories which are unnecessary to project this will be ignored by the git once the changes as been committed to the Remote repository
+# .env
+# /node_modules
+
+.DS_Store
