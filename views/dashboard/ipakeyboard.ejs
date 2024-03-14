@@ -6,8 +6,168 @@
         <link rel="stylesheet" href="/css/IPA_chart.css">
     </head>
     <body>
-      <%- include('../dashboard/ipachart.ejs') %>
-      
+
+        <caption>
+            <h2>English Consonants</h2>
+        </caption>
+
+
+        <table>
+
+
+            <tr>
+              
+                <th></th>
+                <th colspan="2">Bilabial</th>
+                <th colspan ="2">Labiodental</th>
+                <th colspan ="2">Dental</th>
+                <th colspan ="2">Alveolar</th>
+                <th colspan ="2">Postalveolar</th>
+                <th colspan ="2">Palatal</th>
+                <th colspan ="2">Velar</th>
+                <th colspan ="2">Glotal</th>
+              </tr>
+              <tr>
+                <td>Plosive</td>
+                <td onClick="handleAction('p')">p</td>
+                <td onClick="handleAction('b')">b</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('t')">t</td>
+                <td onClick="handleAction('d')">d</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('k')">k</td>
+                <td onClick="handleAction('g')">g</td>
+                <td onClick="handleAction('ʔ')">ʔ</td>
+                <td></td>
+              </tr>
+              <tr>
+                
+                <td>Nasal</td>
+                <td></td>
+                <td onClick="handleAction('m')">m</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('n')">n</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('ŋ')">ŋ</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Tap or Flap</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('ɾ')">ɾ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Affricative</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('tʃ')">tʃ</td>
+                <td onClick="handleAction('dʒ')">dʒ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Fricative</td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('f')">f</td>
+                <td onClick="handleAction('v')">v</td>
+                <td onClick="handleAction('θ')">θ</td>
+                <td onClick="handleAction('ð')">ð</td>
+                <td onClick="handleAction('s')">s</td>
+                <td onClick="handleAction('z')">z</td>
+                <td onClick="handleAction('ʃ')">ʃ</td>
+                <td onClick="handleAction('ʒ')">ʒ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('h')">h</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Approximant</td>
+                <td></td>
+                <td onClick="handleAction('w')">w</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('ɹ')">ɹ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('j')">j</td>
+                <td></td>
+                <td onClick="handleAction('w')">w</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Lateral Approximant</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td onClick="handleAction('l')">l</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            
+        </table>
+
+        
+        <small>
+            The symbols to the right are voiced, left are voiceless.
+          </small>
           <br></br>
           <br></br>
           <div class="container">
@@ -55,4 +215,102 @@
                 });
             });
         }
+      </script>
+        
+        <!-- Vowel Table -->
+        <div>
+          <div>
+            <h2>Vowels</h2>          
+          </div>
+
+          <table>
+            <tr>
+              <th>&nbsp</th>
+              <th colspan="2">Front</th>
+              <th colspan="2">Near-Front</th>
+              <th colspan="2">Central</th>
+              <th colspan="2">Near-Back</th>
+              <th colspan="2">Back</th>
+            </tr>
+            <tr>
+              <th>Close</th>
+              <td class="vowels" onclick="handleAction('i')">i</td>
+              <td class="vowels" onclick="handleAction('y')">y</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="handleAction('ɨ')">ɨ</td>
+              <td class="vowels" onclick="handleAction('ʉ')">ʉ</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="handleAction('ɯ')">ɯ</td>
+              <td class="vowels" onclick="handleAction('u')">u</td>
+            </tr>
+            <tr>
+              <th>Near-Close</th>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="handleAction('ɪ')">ɪ</td>
+              <td class="vowels" onclick="handleAction('ʏ')">ʏ</td>
+              <td colspan="2">&nbsp</td>
+              <td>&nbsp</td>
+              <td class="vowels" onclick="handleAction('ʊ')">ʊ</td>
+              <td colspan="2">&nbsp</td>
+            </tr>
+            <tr>
+              <th>Close-Mid</th>
+              <td class="vowels" onclick="handleAction('e')">e</td>
+              <td class="vowels" onclick="handleAction('ø')">ø</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="handleAction('ɘ')">ɘ</td>
+              <td class="vowels" onclick="handleAction('ɵ')">ɵ</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="handleAction('ɤ')">ɤ</td>
+              <td class="vowels" onclick="handleAction('o')">o</td>
+            </tr>
+            <tr>
+              <th>Mid</th>
+              <td colspan="2">&nbsp</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" colspan="2" onclick="handleAction('ə')">ə</td>
+              <td colspan="2">&nbsp</td>
+              <td colspan="2">&nbsp</td>
+            </tr>
+            <tr>
+              <th>Open-Mid</th>
+              <td class="vowels" onclick="handleAction('ɛ')">ɛ</td>
+              <td class="vowels" onclick="handleAction('œ')">œ</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="handleAction('ɜ')">ɜ</td>
+              <td class="vowels" onclick="handleAction('')">ɞ</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="handleAction('ʌ')">ʌ</td>
+              <td class="vowels" onclick="handleAction('ɔ')">ɔ</td>
+            </tr>
+            <tr>
+              <th>Near-Open</th>
+              <td class="vowels" onclick="handleAction('æ')">æ</td>
+              <td>&nbsp</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="handleAction('ɐ')">ɐ</td>
+              <td>&nbsp</td>
+              <td colspan="2">&nbsp</td>
+              <td colspan="2">&nbsp</td>
+            </tr>
+            <tr>
+              <th>Open</th>
+              <td class="vowels" onclick="handleAction('a')">a</td>
+              <td class="vowels" onclick="handleAction('ɶ')">ɶ</td>
+              <td colspan="2">&nbsp</td>
+              <td colspan="2">&nbsp</td>
+              <td colspan="2">&nbsp</td>
+              <td class="vowels" onclick="handleAction('ɑ')">ɑ</td>
+              <td class="vowels" onclick="handleAction('ɒ')">ɒ</td>
+            </tr>
+          </table>
+          <p>Where symbols appear in pairs, the one to the right represents a rounded vowel.</p>  
+        </div>
+        <script>
+          function playAudio(url){
+            new Audio(url).play();
+          }
         </script>
+        </div>
+      </body>
+</html>
