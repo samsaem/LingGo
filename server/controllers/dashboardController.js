@@ -184,6 +184,32 @@ exports.dashboardQuiz = async (req, res) => {
   });
 }
 
+// AFTER logged in: Quiz/Vowels
+exports.dashboardQuizVowels = async (req, res) => {
+  const locals = {
+      title: "Vowels Quiz",
+      description: "Let's test your Vowels knowledge!",
+  }
+
+  res.render('dashboard/quizvowels', {
+    locals, 
+    layout: '../views/layouts/dashboard'
+  });
+}
+
+// AFTER logged in: Quiz/Consonants
+exports.dashboardQuizConsonants = async (req, res) => {
+  const locals = {
+      title: "Consonants Quiz",
+      description: "Let's test your Consonants knowledge!",
+  }
+
+  res.render('dashboard/quizconsonants', {
+    locals, 
+    layout: '../views/layouts/dashboard'
+  });
+}
+
 // AFTER logged in: IPA chart
 exports.dashboardIPAChart = async (req, res) => {
   const locals = {
@@ -197,7 +223,7 @@ exports.dashboardIPAChart = async (req, res) => {
   });
 }
 
-// AFTER logged in: IPA chart
+// AFTER logged in: IPA keyboard
 exports.dashboardIPAkeyboard = async (req, res) => {
   const locals = {
       title: "IPA keyboard",
