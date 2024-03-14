@@ -39,7 +39,7 @@ th,
 td {
 border: 1px solid var(--bs-primary-rgb); /* Change border color */
 text-align: center;
-padding: 8px;
+padding: 3px;
 }
 
 th {
