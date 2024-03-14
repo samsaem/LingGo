@@ -39,7 +39,7 @@ exports.dashboard = async (req, res) => {
       userName: req.user.firstName,
       locals,
       notes,
-      layout: "../views/layouts/dashboard",
+      layout: "../views/layouts/dashboardNotes",
       current: page,
       pages: Math.ceil(count / perPage)
     });
@@ -139,7 +139,7 @@ exports.dashboardSearch = async (req, res)=>{
   try{
     res.render('dashboard/search',{
       searchResults: '',
-      layout:'../views/layouts/dashboard'
+      layout:'../views/layouts/dashboardNotes'
 
     })
   }catch (error){
@@ -163,7 +163,7 @@ exports.dashboardSearchSubmit = async (req, res) => {
 
   res.render("dashboard/search",{
     searchResults,
-    layout:"../views/layouts/dashboard"
+    layout:"../views/layouts/dashboardNotes"
   });
   } catch(error){
     console.log(error);
