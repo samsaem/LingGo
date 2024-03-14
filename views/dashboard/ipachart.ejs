@@ -1,5 +1,3 @@
-AFTER logged in: IPA CHART
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,6 +6,7 @@ AFTER logged in: IPA CHART
         <link rel="stylesheet" href="/css/IPA_chart.css">
     </head>
     <body>
+      <div class="buttonbox">
         <!-- Consonant Table -->
         <caption>
           <h2>English Consonants</h2>
@@ -235,10 +234,9 @@ AFTER logged in: IPA CHART
       </script>
         
         <!-- Vowel Table -->
-        <div class="quiz">
+        <div>
           <div>
-            <h2>Vowels</h2>
-            <p>Where symbols appear in pairs, the one to the right represents a rounded vowel.</p>            
+            <h2>Vowels</h2>          
           </div>
 
           <table>
@@ -322,12 +320,14 @@ AFTER logged in: IPA CHART
               <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/3/31/PR-open_back_rounded_vowel.ogg/PR-open_back_rounded_vowel.ogg.mp3')">ɒ</td>
             </tr>
           </table>
+          <p>Where symbols appear in pairs, the one to the right represents a rounded vowel.</p>  
         </div>
         <script>
           function playAudio(url){
             new Audio(url).play();
           }
         </script>
+        </div>
       </body>
 </html>
 
