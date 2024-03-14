@@ -231,16 +231,11 @@
           function handleAction(character) {
             if(soundMode) {
               play(character);
-            } else {
-              type(character);
-              keyboard.focus();
-            }
-          }
 
-          function type(character) {
-            var textarea = document.getElementById("keyboard");
-            textarea.value = textarea.value + character;
           }
+        }
+
+
 
           function play(character) {
               const sound = sounds[character];
@@ -347,7 +342,7 @@
               <td class="vowels" onclick="playAudio('http://upload.wikimedia.org/wikipedia/commons/transcoded/3/31/PR-open_back_rounded_vowel.ogg/PR-open_back_rounded_vowel.ogg.mp3')">ɒ</td>
             </tr>
           </table>
-          <p>Where symbols appear in pairs, the one to the right represents a rounded vowel.</p>  
+          <small>Where symbols appear in pairs, the one to the right represents a rounded vowel.<small>  
         </div>
         <script>
           function playAudio(url){
