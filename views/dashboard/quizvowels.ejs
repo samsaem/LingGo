@@ -1,23 +1,108 @@
-AFTER logged in: VOWELS QUIZ
-
 <!-- IMPLEMENTED CHATGPT TO ASSIST WITH QUIZ PAGE
     Prompt: Create a one page multiple choice with that displays result at the end with javascript
 -->
-
-<body>
-
-    <div id="quiz">
-      <div class="question">
-        <p>1. What is the capital of France?</p>
-        <input type="radio" name="q1" value="a"> a) Paris<br>
-        <input type="radio" name="q1" value="b"> b) London<br>
-        <input type="radio" name="q1" value="c"> c) Rome<br>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IPA Chart</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+  </head>
+  <body>
+    <div class="quiz">
+      <div>
+        <h1>Vowel Quiz</h1>
+        <p>Choose the symbol heard in the recording.</p>
       </div>
       <div class="question">
-        <p>2. Which planet is known as the Red Planet?</p>
-        <input type="radio" name="q2" value="a"> a) Mars<br>
-        <input type="radio" name="q2" value="b"> b) Venus<br>
-        <input type="radio" name="q2" value="c"> c) Jupiter<br>
+        <p>
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/9/91/Close_front_unrounded_vowel.ogg/Close_front_unrounded_vowel.ogg.mp3" type="audio/mpeg">
+          </audio>
+        </p>
+        <input type="radio" name="q1" value="a"> ɪ<br>
+        <input type="radio" name="q1" value="b"> i<br>
+      </div>
+      <div class="question">
+        <p>
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/8/80/PR-open-mid_back_unrounded_vowel2.ogg/PR-open-mid_back_unrounded_vowel2.ogg.mp3" type="audio/mpeg">
+          </audio>
+        </p>
+        <input type="radio" name="q2" value="a"> ʌ<br>
+        <input type="radio" name="q2" value="b"> ɛ<br>
+      </div>
+      <div class="question">
+        <p>
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/d/d0/PR-open-mid_back_rounded_vowel.ogg/PR-open-mid_back_rounded_vowel.ogg.mp3" type="audio/mpeg">
+          </audio>
+        </p>
+        <input type="radio" name="q3" value="a"> ɑ<br>
+        <input type="radio" name="q3" value="b"> ɔ<br>
+      </div>
+      <div class="question">
+        <p>
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/5/5d/Close_back_rounded_vowel.ogg/Close_back_rounded_vowel.ogg.mp3" type="audio/mpeg">
+          </audio>
+        </p>
+        <input type="radio" name="q4" value="a"> ʊ<br>
+        <input type="radio" name="q4" value="b"> u<br>
+      </div>
+      <div class="question">
+        <p>
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/d/d5/Near-close_near-back_rounded_vowel.ogg/Near-close_near-back_rounded_vowel.ogg.mp3" type="audio/mpeg">
+          </audio>
+        </p>
+        <input type="radio" name="q5" value="a"> ʊ<br>
+        <input type="radio" name="q5" value="b"> ʌ<br>
+      </div>
+      <div class="question">
+        <p>
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/e/e5/Open_back_unrounded_vowel.ogg/Open_back_unrounded_vowel.ogg.mp3" type="audio/mpeg">
+          </audio>
+        </p>
+        <input type="radio" name="q6" value="a"> æ<br>
+        <input type="radio" name="q6" value="b"> ɑ<br>
+      </div>
+      <div class="question">
+        <p>
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Close_back_unrounded_vowel.ogg/Close_back_unrounded_vowel.ogg.mp3" type="audio/mpeg">
+          </audio>
+        </p>
+        <input type="radio" name="q7" value="a"> ɪ<br>
+        <input type="radio" name="q7" value="b"> ɯ<br>
+      </div>
+      <div class="question">
+        <p>
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/7/71/Open-mid_front_unrounded_vowel.ogg/Open-mid_front_unrounded_vowel.ogg.mp3" type="audio/mpeg">
+          </audio>
+        </p>
+        <input type="radio" name="q8" value="a"> ɛ<br>
+        <input type="radio" name="q8" value="b"> ə<br>
+      </div>
+      <div class="question">
+        <p>
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/d/d0/PR-open-mid_back_rounded_vowel.ogg/PR-open-mid_back_rounded_vowel.ogg.mp3" type="audio/mpeg">
+          </audio>
+        </p>
+        <input type="radio" name="q9" value="a"> ɔ<br>
+        <input type="radio" name="q9" value="b"> o<br>
+      </div>
+      <div class="question">
+        <p>
+          <audio controls>
+            <source src="http://upload.wikimedia.org/wikipedia/commons/transcoded/6/6c/Close-mid_front_unrounded_vowel.ogg/Close-mid_front_unrounded_vowel.ogg.mp3" type="audio/mpeg">
+          </audio>
+        </p>
+        <input type="radio" name="q10" value="a"> e<br>
+        <input type="radio" name="q10" value="b"> ɛ<br>
       </div>
       <button onclick="showResult()">Submit</button>
     </div>
@@ -28,32 +113,40 @@ AFTER logged in: VOWELS QUIZ
     </div>
     
     <script>
-    function showResult() {
-      var score = 0;
-      var totalQuestions = 2;
-    
-      var answers = {
-        q1: "a",
-        q2: "a"
-      };
-    
-      for (var i = 1; i <= totalQuestions; i++) {
-        var radios = document.getElementsByName('q' + i);
-        for (var j = 0; j < radios.length; j++) {
-          if (radios[j].checked) {
-            if (radios[j].value === answers['q' + i]) {
-              score++;
+      function showResult() {
+        var score = 0;
+        var totalQuestions = 10;
+      
+        var answers = {
+          q1: "b",
+          q2: "a",
+          q3: "a",
+          q4: "b",
+          q5: "a",
+          q6: "b",
+          q7: "b",
+          q8: "a",
+          q9: "a",
+          q10: "a"
+        };
+      
+        for (var i = 1; i <= totalQuestions; i++) {
+          var radios = document.getElementsByName('q' + i);
+          for (var j = 0; j < radios.length; j++) {
+            if (radios[j].checked) {
+              if (radios[j].value === answers['q' + i]) {
+                score++;
+              }
+              break;
             }
-            break;
           }
         }
+      
+        var resultContainer = document.getElementById('result');
+        resultContainer.style.display = 'block';
+        var scoreContainer = document.getElementById('score');
+        scoreContainer.innerHTML = 'You scored ' + score + ' out of ' + totalQuestions + '.';
       }
-    
-      var resultContainer = document.getElementById('result');
-      resultContainer.style.display = 'block';
-      var scoreContainer = document.getElementById('score');
-      scoreContainer.innerHTML = 'You scored ' + score + ' out of ' + totalQuestions + '.';
-    }
     </script>
-    
-    </body>
+  </body>
+</html>

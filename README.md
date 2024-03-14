@@ -21,7 +21,7 @@ Users can create an account and login with LingGo through their gmail account to
 
 * _Search:_ Users can use the *search bar* at top of the web page to look for previous notes they have saved
 
-* _IPA Keyboard:_ Since IPA symbols are special characters that aren't easily accessible through computer's keyboard, users can use this feature to get the symbol by simply clicking on the symbol and 
+* _IPA Keyboard:_ Since IPA symbols are special characters that aren't easily accessible through computer's keyboard, users can use this feature to get the symbol by simply clicking on the symbol
 
 * _Quiz:_ LingGo is testing out a multiple choice quiz page and users can quiz their knowledge in consonants and vowels.
 
