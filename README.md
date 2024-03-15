@@ -7,7 +7,7 @@ LingGo is an interactive study tool to learn the International Phonetic Alphabet
 
 To access the full features of LingGo, Users are welcome to create an account with LingGo!
 
-# Features:
+## Features
 
 **IPA Chart:**
 The interactive IPA chart includes two tables (consonants and vowels). Both tables are interactive. Users may hover and click on a symbol. Once a symbol is clicked, a corresponding sound will automatically play.
@@ -25,7 +25,7 @@ Users can create an account and login with LingGo through their gmail account to
 
 * _Quiz:_ LingGo is testing out a multiple choice quiz page and users can quiz their knowledge in consonants and vowels.
 
-## Tech Stack:
+## Tech Stack
 
 * HTML/CSS <img src="https://logowik.com/content/uploads/images/css3-html51661.jpg" alt="javascript" width="90px">
 * Javascript <img src="https://seeklogo.com/images/J/javascript-logo-8892AEFCAC-seeklogo.com.png" alt="javascript" width="30px">
@@ -35,9 +35,9 @@ Users can create an account and login with LingGo through their gmail account to
 
 
 
-## Environment Set Up:
+## Environment Set Up
 
-To launch LingGo on your local machine, please download or clone [this repository](git@github.com:samsaem/UCLA-CS-35L.git) and follow the instructions below.
+To launch LingGo on your local machine, please download or clone [this repository](https://github.com/samsaem/UCLA-CS-35L.git) and follow the instructions below.
 
 **Set up dependencies**
 
